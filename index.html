@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f3eb" />
+    <script>
+      // Restore the saved theme before the first paint, including on reload.
+      (() => {
+        let dark = false
+        try { dark = localStorage.getItem('personal-space-theme') === 'dark' } catch {}
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#24251f' : '#f5f3eb'
+      })()
+    </script>
+    <meta name="description" content="Zain Allateef — Artificial Intelligence student at Al-Zaytoonah University of Jordan. Explore NLP, machine learning, data, and front-end projects." />
+    <meta property="og:title" content="Zain Allateef — Personal Space" />
+    <meta property="og:description" content="AI, language, and a little creative chaos. Explore Zain Allateef's projects and portfolio." />
+    <meta property="og:type" content="website" />
+    <title>Zain Allateef — Personal Space</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
